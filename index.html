@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="borboleta.png" type="image/x-icon"> 
+    <title>Jogo da Borboleta</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+        <h1>Jogo da Borboleta! 🦋</h1>
+        <p>Use a barra para ajustar a velocidade. Clique em "Iniciar Jogo" para começar! Atenção: você só pode mudar a velocidade do jogo caso ele esteja parado.</p>
+
+        <div id="game">
+            <div id="scoreBoard">
+                Tempo: <span id="time">0</span>s | Pontos: <span id="score">0</span>
+            </div>
+            <div id="dino"></div>
+            <div id="cactus"></div>
+        </div>
+        <div id="status"></div>
+        <div>
+            <label for="speedRange">Velocidade do jogo:</label>
+            <input type="range" id="speedRange" min="1" max="10" value="5">
+        </div>
+        <div>
+            <button id="startButton">Iniciar Jogo</button>
+        </div>
+
+
+</body>
+
+</html>

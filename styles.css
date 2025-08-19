@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&display=swap');
+
+body {
+    font-family: 'Alexandria', Arial, sans-serif;
+    background: #f0f4f8;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+h1 {
+    color: #00796b;
+}
+
+p {
+    color: #004d40;
+    font-size: 16px;
+}
+
+#game {
+    position: relative;
+    width: 600px;
+    height: 200px;
+    border: 2px solid #555;
+    margin: 20px auto;
+    overflow: hidden;
+    background: #e0f7fa; /* azul suave */
+    border-radius: 10px;
+}
+
+#dino {
+    width: 50px;
+    height: 50px;
+    background-image: url(borboleta.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    bottom: 0;
+    left: 40px;
+}
+
+#dino.jump {
+    animation: jump 0.5s ease-in-out;
+}
+
+@keyframes jump {
+    0% { bottom: 0; }
+    50% { bottom: 120px; }
+    100% { bottom: 0; }
+}
+
+#cactus {
+    width: 80px;
+    height: 80px;
+    background-image: url(arvore.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    bottom: 0;
+    left: 600px;
+}
+
+@keyframes move {
+    from { left: 9000px; }
+    to { left: -100px; }
+}
+
+.game-over {
+    margin-top: 20px;
+    font-size: 22px;
+    font-weight: bold;
+    color: #ff0000;
+}
+
+button {
+    padding: 12px 24px;
+    font-size: 16px;
+    margin-top: 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    background-color: #00796b;
+    color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #004d40;
+}
+
+.controls {
+    margin-top: 15px;
+}
+
+/* Acessibilidade: foco visível */
+button:focus, input:focus {
+    outline: 3px solid #ffd54f;
+    outline-offset: 2px;
+}
